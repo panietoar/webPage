@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ace="http://www.icefaces.org/icefaces/components" xmlns:ice="http://www.icesoft.com/icefaces/component">
+
+<h:head>
+</h:head>
+
+<h:body>
+	<h:form>
+		<ice:panelGrid>
+			<ace:textEntry label="usuario: " labelPosition="left" value="#{registroUI.cuenta.username}" />
+			<ice:panelGrid columns="2">
+				<h:outputText value="clave: " />
+				<h:inputSecret value="#{registroUI.cuenta.clave}" label="clave: " />
+			</ice:panelGrid>
+			<ace:textEntry label="e-mail: " labelPosition="left" value="#{registroUI.cuenta.email}" />
+
+			<h:commandLink action="#{registroUI.crearCuenta}" value="Registrar" />
+		</ice:panelGrid>
+	</h:form>
+
+</h:body>
+
+</html>
